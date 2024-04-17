@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Hướng dẫn nấu ăn trực tuyến</title>
+    <link rel="shortcut icon" href="../img/logo/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .flex {
+            display: flex;
+            align-items: center;
+        }
+        
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+        
+        .nav-center {
+            width: 90%;
+            margin: 0 auto;
+        }
+        
+        .nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo img {
+            height: 40px;
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .nav-link {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+        /* Page */
+        
+        .page {
+            padding: 20px;
+        }
+        
+        .recipe-hero {
+            display: flex;
+            align-items: center;
+            margin-left: 5px;
+        }
+        /* Recipe section */
+        
+        .recipe {
+            display: flex;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            /* Adding shadow */
+        }
+        
+        .recipe-info h2 {
+            text-align: center;
+            text-transform: uppercase;
+        }
+        
+        .recipe img {
+            width: 50%;
+            border-radius: 20px;
+        }
+        
+        .recipe article {
+            width: 50%;
+            /* Article takes half of the container width */
+        }
+        /* Adding space between img and article */
+        
+        .recipe img {
+            margin-right: 20px;
+            /* Adjust as needed */
+        }
+        
+        .recipe-content {
+            display: flex;
+            justify-content: space-between;
+        }
+        /* Single instruction */
+        
+        .single-instruction {
+            width: calc(100% - 20px);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Second column */
+        
+        .second-column {
+            margin-top: 50px;
+            width: 40%;
+            margin-left: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .single-instruction,
+        .second-column {
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        
+        .single-instruction header {
+            display: flex;
+            align-items: center;
+        }
+        
+        .single-instruction header div {
+            height: 1px;
+            background-color: #333;
+            flex-grow: 1;
+            margin-left: 10px;
+        }
+        /* Footer */
+        
+        .page-footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        
+        .footer-logo {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="topnav">
+            <div class="container flex">
+                <div class="navicons flex">
+                    <a href="#"><i class=" fa-brands fa-facebook "></i></a>
+                    <a href="#"><i class=" fa-brands fa-twitter "></i></a>
+                    <a href="#"><i class=" fa-brands fa-linkedin "></i></a>
+                    <a href="#"><i class=" fa-brands fa-youtube "></i></a>
+                </div>
+                <a href="/" class="srbtn">Thêm món ăn mới<i class="fa-solid fa-plus"></i></a>
+            </div>
+
+        </div>
+
+        <div class="mainnav">
+            <div class="container flex">
+                <a href="index.html">
+                    <div class="logo flex">
+                        <img src="/img/logo/logo-black.png" alt="">
+                        <h1>Food Recipes</h1>
+                    </div>
+                </a>
+                <ul class="navlist flex">
+                    <li><a href="../index.html">Trang chủ</a></li>
+                    <li><a href="/">Blog</a></li>
+                    <li><a href="../recipe.html">Công thức</a></li>
+                    <li><a href="../contact.html">Liên lạc</a></li>
+                </ul>
+                <div class="searchbar flex">
+                    <a href="../signup.html" class="signinup">Đăng ký</a>
+                    <a href="#" class="signinup" id="loginBtn">Đăng nhập</a>
+                    <i class="fa-solid fa-magnifying-glass" id="searchopen"></i>
+                    <div class="navonoff">
+                        <input type="checkbox" id="checkbox2" hidden="">
+                        <label for="checkbox2" class="toggle2">
+                            <div class="bar bar--top"></div>
+                            <div class="bar bar--middle"></div>
+                            <div class="bar bar--bottom"></div>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+        <div class="recipe-page">
+            <section class="recipe">
+                <img src="/img/mon_an/banh-xeo.jpg" class="">
+                <article class="recipe-info">
+                    <h2>Bánh xèo</h2>
+                    <p>
+                        Với vị ngọt tự nhiên cùng hương thơm dịu nhẹ, mật ong đã góp phần tạo nên sự hoàn hảo cho nhiều món ngon, trong đó phải kể đến món gà nướng mật ong. Sự kết hợp vị ngọt của mật ong, thịt gà dai ngon cùng với phương pháp nướng tạo nên món ăn thơm ngon,
+                        hấp dẫn khó cưỡng. Không chỉ vậy, món gà nướng còn có màu vàng óng mượt, kích thích mạnh đến thị giác. Cùng tham khảo ngay cách làm gà nướng mật ong đơn giản dưới đây để thu được thành phẩm đẹp mắt, ngon miệng trong thời gian ngắn
+                        chế biến nhé.
+                    </p>
+                    <div class="recipe-icons">
+                        <article>
+                            <i class="fa-regular fa-clock"></i>
+                            <h5>Thời gian chuẩn bị</h5>
+                            <p>20 min.</p>
+                        </article>
+                        <article>
+                            <i class="fa-regular fa-clock"></i>
+                            <h5>Thời gian nấu</h5>
+                            <p>20 min.</p>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-user"></i>
+                            <h5>Phục vụ</h5>
+                            <p>6 - 8 người</p>
+                        </article>
+                    </div>
+                    <!-- Thêm tag vào đây -->
+                    <p class="recipe-tags">
+                        Tags : <a href="tag-template.html">heo</a>
+                        <a href="tag-template.html">bua-toi</a>
+                        <a href="tag-template.html">tom</a>
+                        <a href="tag-template.html">chien</a>
+                    </p>
+                </article>
+            </section>
+            <!-- content -->
+            <section class="recipe-content">
+                <article>
+                    <h1>HƯỚNG DẪN</h1>
+                    <hr>
+
+                    <div class="single-instruction">
+                        <header flex>
+                            <p>Bước 1: </p>
+                            <b> Sơ chế nguyên liệu</b>
+                        </header>
+                        <p>
+                            Tôm sau khi mua về rửa sạch, cắt râu, sau đó ướp tôm với một muỗng cà phê muối, 1 muỗng cà phê gừng giã ra trong 15-20 phút.
+                            <br> <br>Thịt heo rửa sạch với muối sau đó đem thái mỏng. Ướp thịt heo với 1 muỗng canh nước mắm, 1 muỗng cà phê bột ngọt, ½ muỗng cà phê tiêu và để trong 15-20 phút cho thịt thấm gia vị. Rửa sạch và cắt nhỏ hành lá, hành tây,
+                            giá và các loại rau.
+                        </p>
+                    </div>
+                    <!-- end of single instruction -->
+                    <!-- single instruction -->
+                    <div class="single-instruction">
+                        <header>
+                            <header flex>
+                                <p>Bước 2: </p>
+                                <b>Làm vỏ bánh xèo và xào nhân bánh.</b>
+                            </header>
+                        </header>
+                        <p>
+                            Bắc chảo lên bếp và cho vào một lớp dầu mỏng. Sau khi dầu nóng, bạn múc muỗng canh bột vừa và tráng đều chảo.
+                            <br><br> Hãy đổ một lớp bột vừa phải đủ để tráng hết mặt chảo nhưng đừng quá dày vì lớp bột dày làm bánh xèo không còn được giòn nữa. Sau đó, bạn chiên từ từ với lửa nhỏ để nước trong bột bốc hơi đi, thì bánh xèo của chúng
+                            ta sẽ giòn ngon vô cùng, hãy thử tham khảo mẹo làm bánh xèo giòn nhé!
+                            <br><br> Sau đó, cho thêm một ít nhân và giá vào. Để lửa nhỏ, đợi khoảng 2 phút cho vỏ bánh khô giòn rồi bạn gấp đôi bánh lại hong thêm một chút và để bánh ra dĩa.
+                        </p>
+                    </div>
+                    <!-- end of single instruction -->
+                    <!-- single instruction -->
+                    <div class="single-instruction">
+                        <header>
+                            <header flex>
+                                <p>Bước 3: </p>
+                                <b>Thành phẩm</b>
+                            </header>
+                        </header>
+                        <p>
+                            Vỏ bánh được tráng mỏng, khi ăn thì cảm giác giòn rụm, lại có màu vàng ươm đẹp mắt của tinh bột nghệ. Kết hợp với nhân bên trong gồm thịt heo, tôm, giá ăn rất vừa miệng. Chỉ cần thêm một chén nước chấm chua ngọt cay cay, tất cả sẽ hòa tan trong miệng
+                            tạo nên hương vị cực ngon khó có thể quên được.
+                        </p>
+                    </div>
+                    <!-- end of single instruction -->
+                    <!-- single instruction -->
+                    <div class="single-instruction">
+                        <header>
+                            <header flex>
+                                <p>Bước 4: </p>
+                                <b>Làm nướng chấm bánh xèo</b>
+                            </header>
+                        </header>
+                        <p>
+                            <ul>
+                                <li>6 muỗng nước mắm ngon</li>
+                                <li>3 muỗng đường</li>
+                                <li>4 muỗng nước sôi để nguội</li>
+                                <li>2 muỗng nước cốt chanh</li>
+                                <li>1 muỗng tỏi, ớt băm</li>
+                            </ul>
+                            Khuấy đều đến khi các gia vị hòa tan với nhau
+                        </p>
+                    </div>
+                    <!-- end of single instruction -->
+                </article>
+                <article class="second-column">
+                    <div>
+                        <h4>Nguyên liệu</h4>
+                        <ul>
+                            <li>200gr bột gạo khô</li>
+                            <li>10gr bột nghệ</li>
+                            <li>200gr thịt lợn</li>
+                            <li>200gr tôm</li>
+                            <li>100ml bia (cho bánh xèo giòn hơn)</li>
+                            <li>30gr nấm hương</li>
+                            <li>1 củ hành tây</li>
+                            <li>100gr giá đỗ</li>
+                            <li>Gia vị: muối, đường, tiêu, hành tím, gừng, hành lá</li>
+
+                        </ul>
+                    </div>
+                    <br>
+                    <div>
+                        <h4>Video hướng dẫn</h4>
+                        <iframe width="420" height="315" src="https://www.youtube.com/embed/8w0psAnY6nE">
+
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+    <!-- footer -->
+    <footer class="page-footer ">
+        <p>
+            &copy; <span id="date "></span>
+            <span class="footer-logo ">Food Recipes</span> Built by
+            <a href="https://www.facebook.com/ngnhtruong ">Nguyễn Nhật Trường</a>
+        </p>
+    </footer>
+    <script src="/js/app.js "></script>
+</body>
+
+
+
+</html>

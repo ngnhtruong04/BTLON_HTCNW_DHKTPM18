@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Hướng dẫn nấu ăn trực tuyến</title>
+    <link rel="shortcut icon" href="../img/logo/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .flex {
+            display: flex;
+            align-items: center;
+        }
+        
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+        
+        .nav-center {
+            width: 90%;
+            margin: 0 auto;
+        }
+        
+        .nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo img {
+            height: 40px;
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .nav-link {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+        /* Page */
+        
+        .page {
+            padding: 20px;
+        }
+        
+        .recipe-hero {
+            display: flex;
+            align-items: center;
+            margin-left: 5px;
+        }
+        /* Recipe section */
+        
+        .recipe {
+            display: flex;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            /* Adding shadow */
+        }
+        
+        .recipe img {
+            width: 50%;
+            /* Image takes half of the container width */
+        }
+        
+        .recipe article {
+            width: 50%;
+            /* Article takes half of the container width */
+        }
+        /* Adding space between img and article */
+        
+        .recipe img {
+            margin-right: 20px;
+            /* Adjust as needed */
+        }
+        
+        .recipe-content {
+            display: flex;
+            justify-content: space-between;
+        }
+        /* Single instruction */
+        
+        .single-instruction {
+            width: calc(100% - 20px);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Second column */
+        
+        .second-column {
+            margin-top: 50px;
+            width: 40%;
+            margin-left: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .single-instruction,
+        .second-column {
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        
+        .single-instruction header {
+            display: flex;
+            align-items: center;
+        }
+        
+        .single-instruction header div {
+            height: 1px;
+            background-color: #333;
+            flex-grow: 1;
+            margin-left: 10px;
+        }
+        /* Footer */
+        
+        .page-footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        
+        .footer-logo {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="topnav">
+            <div class="container flex">
+                <div class="navicons flex">
+                    <a href="#"><i class=" fa-brands fa-facebook "></i></a>
+                    <a href="#"><i class=" fa-brands fa-twitter "></i></a>
+                    <a href="#"><i class=" fa-brands fa-linkedin "></i></a>
+                    <a href="#"><i class=" fa-brands fa-youtube "></i></a>
+                </div>
+                <a href="/" class="srbtn">Thêm món ăn mới<i class="fa-solid fa-plus"></i></a>
+            </div>
+
+        </div>
+
+        <div class="mainnav">
+            <div class="container flex">
+                <a href="index.html">
+                    <div class="logo flex">
+                        <img src="/img/logo/logo-black.png" alt="">
+                        <h1>Food Recipes</h1>
+                    </div>
+                </a>
+                <ul class="navlist flex">
+                    <li><a href="../index.html">Trang chủ</a></li>
+                    <li><a href="/">Blog</a></li>
+                    <li><a href="../recipe.html">Công thức</a></li>
+                    <li><a href="../contact.html">Liên lạc</a></li>
+                </ul>
+                <div class="searchbar flex">
+                    <a href="../signup.html" class="signinup">Đăng ký</a>
+                    <a href="#" class="signinup" id="loginBtn">Đăng nhập</a>
+                    <i class="fa-solid fa-magnifying-glass" id="searchopen"></i>
+                    <div class="navonoff">
+                        <input type="checkbox" id="checkbox2" hidden="">
+                        <label for="checkbox2" class="toggle2">
+                            <div class="bar bar--top"></div>
+                            <div class="bar bar--middle"></div>
+                            <div class="bar bar--bottom"></div>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+        <div class="recipe-page">
+            <section class="recipe">
+                <img src="/img/mon_an/bap-cai-xao.jpg" class="">
+                <article class="recipe-info">
+                    <h2>Bắp cải xào</h2>
+                    <p>
+                        Trong thành phần dinh dương của rau bắp cải là loại rau rất bổ dưỡng có thể chế biến thành nhiều món ăn như luộc, dưa muối hoặc có thể xào. Trong đó xào rau bắp cải được nhiều người thích vì dễ ăn lại đậm đà.
+                    </p>
+                    <div class="recipe-icons">
+                        <article>
+                            <i class="fa-regular fa-clock"></i>
+                            <h5>Thời gian chuẩn bị</h5>
+                            <p>10 min.</p>
+                        </article>
+                        <article>
+                            <i class="fa-regular fa-clock"></i>
+                            <h5>Thời gian nấu</h5>
+                            <p>20 min.</p>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-user"></i>
+                            <h5>Phục vụ</h5>
+                            <p>4 người</p>
+                        </article>
+                    </div>
+                    <!-- Thêm tag vào đây -->
+                    <p class="recipe-tags">
+                        Tags : <a href="#">bap-cai</a>
+                        <a href="#">xao</a>
+                        <a href="#">rau</a>
+                    </p>
+                </article>
+            </section>
+            <!-- content -->
+            <section class="recipe-content">
+                <article>
+                    <h1>HƯỚNG DẪN</h1>
+                    <hr>
+
+                    <div class="single-instruction">
+                        <header flex>
+                            <p>Bước 1: </p>
+                            <b> Sơ chế nguyên liệu</b>
+                        </header>
+                        <p>
+                            Bắp cải mua về dùng dao cắt thành dạng sợi mỏng dài, nhỏ vừa ăn. Sau đó cho hết bắp cải đã cắt vào thau nước muối loãng ngâm từ 10 - 15 phút, rửa lại với nước 1 - 2 lần nữa cho thật sạch rồi vớt ra rổ, để ráo.
+                            <br><br> Hành lá, ngò rí cắt bỏ gốc và phần lá úng, rửa sạch để ráo. Hành lá cắt phần đầu hành và phần lá hành để riêng.
+                            <br><br> Phần đầu hành cho vào cối cùng với 1/2 muỗng cà phê tiêu xay dùng chày giã nhuyễn. Phần lá hành và ngò rí thì cắt nhỏ.
+                    </div>
+                    <!-- end of single instruction -->
+                    <!-- single instruction -->
+                    <div class="single-instruction">
+                        <header>
+                            <header flex>
+                                <p>Bước 2: </p>
+                                <b>Xào bắp cải với trứng</b>
+                            </header>
+                        </header>
+                        <p>
+                            Bắc chảo lên bếp cho vào 1 muỗng canh dầu ăn, đợi dầu nóng lên thì cho phần hành tiêu đã giã vào chảo phi thơm. Tiếp đến, cho bắp cải vào đảo đều, khi bắp cải bắt đầu mềm và xẹp xuống thì nêm thêm vào 1 muỗng canh hạt nêm, 1 muỗng cà phê đường.
+                            <br><br> Tiếp tục xào bắp cải thêm khoảng 1 phút nữa thì cho hết phần trứng gà vào đảo đều, đến khi cả trứng và bắp cải đều chín là được. Nhanh tay nêm nếm lại gia vị cho vừa với khẩu vị, cuối cùng cho hành ngò vào đảo sơ qua
+                            và tắt bếp.
+                        </p>
+                    </div>
+                    <!-- end of single instruction -->
+                    <!-- single instruction -->
+                    <div class="single-instruction">
+                        <header>
+                            <header flex>
+                                <p>Bước 3: </p>
+                                <b>Thành phẩm</b>
+                            </header>
+                        </header>
+                        <p>
+                            Lấy bắp cải xào trứng ra đĩa, trang trí vài cọng ngò rí và rắc lên 1 ít tiêu xay cho dậy mùi thơm là có thể thưởng thức.
+                            <br><br> Vị ngọt của bắp cải, vị béo ngậy của trứng gà, món bắp cải xào trứng không chỉ thơm ngon, dễ ăn, đưa cơm mà còn cực kỳ bổ dưỡng nữa đấy nhé!
+                        </p>
+                    </div>
+                    <!-- end of single instruction -->
+
+                </article>
+                <article class="second-column">
+                    <div>
+                        <h4>Nguyên liệu</h4>
+                        <ul>
+                            <li>Bắp cải 300 gr</li>
+                            <li>Trứng gà 2 quả</li>
+                            <li>Hành lá 2 nhánh</li>
+                            <li>Ngò rí 1 nhánh</li>
+                            <li>Dầu ăn 1 muỗng canh</li>
+                            <li>Gia vị thông dụng 1 ít</li>
+
+                            <li> Gia vị thông dụng 1 ít
+                                <br>(muối/ hạt nêm/ đường/ bột ngọt/ tiêu xay)</li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div>
+                        <h4>Video hướng dẫn</h4>
+                        <iframe width="420" height="315" src="https://www.youtube.com/embed/ekLPmU4LrH0">
+
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+    <!-- footer -->
+    <footer class="page-footer ">
+        <p>
+            &copy; <span id="date "></span>
+            <span class="footer-logo ">Food Recipes</span> Built by
+            <a href="https://www.facebook.com/ngnhtruong ">Nguyễn Nhật Trường</a>
+        </p>
+    </footer>
+    <script src="/js/app.js "></script>
+</body>
+
+
+
+</html>

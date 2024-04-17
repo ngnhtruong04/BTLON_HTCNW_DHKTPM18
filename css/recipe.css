@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.food-list {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.food-list h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.food-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.food-list li {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.food-list li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.food-list li img {
+    max-width: 40%;
+    float: left;
+    margin-right: 20px;
+    border-radius: 10px;
+    border-radius: 10px;
+}
+
+.food-list li h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.food-list li p {
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.food-list li button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.food-list li button:hover {
+    background-color: #0056b3;
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.page-btn {
+    cursor: pointer;
+    margin: 0 5px;
+    color: #333;
+}
+
+.page-btn:hover {
+    color: #007bff;
+}

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Hướng dẫn nấu ăn trực tuyến</title>
+    <link rel="shortcut icon" href="../img/logo/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Container Styles */
+        
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Contact Information Styles */
+        
+        .contact-info {
+            text-align: center;
+        }
+        
+        .contact-info h2 {
+            margin-bottom: 20px;
+        }
+        
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            text-align: left;
+        }
+        
+        strong {
+            color: #333;
+        }
+        
+        .page-footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        
+        .footer-logo {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="topnav">
+            <div class="container flex">
+                <div class="navicons flex">
+                    <a href="#"><i class=" fa-brands fa-facebook "></i></a>
+                    <a href="#"><i class=" fa-brands fa-twitter "></i></a>
+                    <a href="#"><i class=" fa-brands fa-linkedin "></i></a>
+                    <a href="#"><i class=" fa-brands fa-youtube "></i></a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="mainnav">
+            <div class="container flex">
+                <a href="index.html">
+                    <div class="logo flex">
+                        <img src="../img/logo/logo-black.png" alt="">
+                        <h1>Food Recipes</h1>
+                    </div>
+                </a>
+                <ul class="navlist flex">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="/">Blog</a></li>
+                    <li><a href="recipe.html">Công thức</a></li>
+                    <li><a href="contact.html">Liên lạc</a></li>
+                </ul>
+
+                <div class="searchbar flex">
+                    <a href="signinup.html" class="signinup">Đăng ký</a>
+                    <a href="#" class="signinup" id="loginBtn">Đăng nhập</a>
+                    <i class="fa-solid fa-magnifying-glass" id="searchopen"></i>
+                    <div class="navonoff">
+                        <input type="checkbox" id="checkbox2" hidden="">
+                        <label for="checkbox2" class="toggle2">
+                            <div class="bar bar--top"></div>
+                            <div class="bar bar--middle"></div>
+                            <div class="bar bar--bottom"></div>
+                        </label>
+                    </div>
+
+                </div>
+
+                <div class="searchinput">
+                    <input type="text" placeholder="Tìm kiếm...">
+                    <i class="fa-solid fa-xmark" id="removesearch"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Đăng nhập</h2>
+            <form action="#" method="post" class="login-form">
+                <div class="input-group">
+                    <label for="username">Tên tài khoản:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Mật khẩu:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="input-group">
+                    <label for="role">Loại tài khoản:</label>
+                    <select id="role" name="role">
+                    <option value="user">Người dùng thường</option>
+                    <option value="admin">Tài khoản admin</option>
+                </select>
+                </div>
+                <button type="submit" class="login-btn">Đăng nhập</button>
+            </form>
+        </div>
+    </div>
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>Thông tin liên lạc</h2>
+            <table>
+                <tr>
+                    <td><strong>Người sở hữu:</strong></td>
+                    <td>Nguyễn Nhật Trường</td>
+                </tr>
+                <tr>
+                    <td><strong>Email:</strong></td>
+                    <td>nnt942004@gmail.com</td>
+                </tr>
+                <tr>
+                    <td><strong>Số điện thoại:</strong></td>
+                    <td>0389602905</td>
+                </tr>
+                <tr>
+                    <td><strong>Address:</strong></td>
+                    <td>Thành phố Hồ Chí Minh</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer>
+        <div class="container flex">
+            <div class="footer flex">
+                <div class="footerlogo">
+                    <h1>Food Recipes</h1>
+                    <p>Trang cung cấp thực đơn món ăn mới hàng ngày. Đây cũng là nơi để mọi người trao đổi các công thức nấu ăn của mình.</p>
+                    <div class="fsocial">
+                        <a href="http://facebook.com/" target="_blank" title="facebook" rel="noopener noreferrer"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="http://twitter.com/" target="_blank" title="twitter" rel="noopener noreferrer"><i
+                                class="fa-brands fa-twitter"></i></a>
+                        <a href="http://linkedin.com/" target="_blank" title="linkedin" rel="noopener noreferrer"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="http://youtube.com/" target="_blank" title="youtube" rel="noopener noreferrer"><i
+                                class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footernav">
+                    <h3>Thông tin</h3>
+                    <ul class="flex">
+                        <li><a href="/">Trang chủ</a></li>
+                        <li><a href="/">Liên lạc</a></li>
+                    </ul>
+                </div>
+                <div class="footernav">
+                    <h3>Thực đơn</h3>
+                    <ul class="flex">
+                        <li><a href="/">Bữa sáng</a></li>
+                        <li><a href="/">Bữa trưa</a></li>
+                        <li><a href="/">Bữa tối</a></li>
+                        <li><a href="/">Món ăn làm từ sữa</a></li>
+                    </ul>
+                </div>
+
+                <div class="footerintro">
+                    <div id=text-9 class="widget column  widget_text">
+                        <h3>
+                            <span>Giới thiệu</span>
+                        </h3>
+                        <div class="text">
+                            <p>Food Recipes là trang web hướng dẫn nấu ăn ngon dành cho tất cả mọi người, từ những người mới bắt đầu đến những đầu bếp dày dặn kinh nghiệm. Trang web cung cấp hàng nghìn công thức nấu ăn cho các món ăn từ khắp nơi trên thế
+                                giới, cũng như các mẹo và lời khuyên nấu ăn hữu ích.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex">
+                <h5>&copy; 2024 Food Recipes All Rights Reserverd</h5>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/app.js "></script>
+</body>
+
+
+<script src="../js/script.js "></script>
+</body>
+
+</html>

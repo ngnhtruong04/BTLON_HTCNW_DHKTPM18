@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Hướng dẫn nấu ăn trực tuyến</title>
+    <link rel="shortcut icon" href="../img/logo/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .flex {
+            display: flex;
+            align-items: center;
+        }
+        
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+        
+        .nav-center {
+            width: 90%;
+            margin: 0 auto;
+        }
+        
+        .nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo img {
+            height: 40px;
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .nav-link {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+        /* Page */
+        
+        .page {
+            padding: 20px;
+        }
+        
+        .recipe-hero {
+            display: flex;
+            align-items: center;
+            margin-left: 5px;
+        }
+        /* Recipe section */
+        
+        .recipe {
+            display: flex;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            /* Adding shadow */
+        }
+        
+        .recipe img {
+            width: 50%;
+            /* Image takes half of the container width */
+        }
+        
+        .recipe article {
+            width: 50%;
+            /* Article takes half of the container width */
+        }
+        /* Adding space between img and article */
+        
+        .recipe img {
+            margin-right: 20px;
+            /* Adjust as needed */
+        }
+        
+        .recipe-content {
+            display: flex;
+            justify-content: space-between;
+        }
+        /* Single instruction */
+        
+        .single-instruction {
+            width: calc(100% - 20px);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Second column */
+        
+        .second-column {
+            margin-top: 50px;
+            width: 40%;
+            margin-left: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .single-instruction,
+        .second-column {
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        
+        .single-instruction header {
+            display: flex;
+            align-items: center;
+        }
+        
+        .single-instruction header div {
+            height: 1px;
+            background-color: #333;
+            flex-grow: 1;
+            margin-left: 10px;
+        }
+        /* Footer */
+        
+        .page-footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        
+        .footer-logo {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="topnav">
+            <div class="container flex">
+                <div class="navicons flex">
+                    <a href="#"><i class=" fa-brands fa-facebook "></i></a>
+                    <a href="#"><i class=" fa-brands fa-twitter "></i></a>
+                    <a href="#"><i class=" fa-brands fa-linkedin "></i></a>
+                    <a href="#"><i class=" fa-brands fa-youtube "></i></a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="mainnav">
+            <div class="container flex">
+                <a href="index.html">
+                    <div class="logo flex">
+                        <img src="/img/logo/logo-black.png" alt="">
+                        <h1>Food Recipes</h1>
+                    </div>
+                </a>
+                <ul class="navlist flex">
+                    <li><a href="../index.html">Trang chủ</a></li>
+                    <li><a href="/">Blog</a></li>
+                    <li><a href="../recipe.html">Công thức</a></li>
+                    <li><a href="../contact.html">Liên lạc</a></li>
+                </ul>
+                <div class="searchbar flex">
+                    <a href="../signup.html" class="signinup">Đăng ký</a>
+                    <a href="#" class="signinup" id="loginBtn">Đăng nhập</a>
+                    <i class="fa-solid fa-magnifying-glass" id="searchopen"></i>
+                    <div class="navonoff">
+                        <input type="checkbox" id="checkbox2" hidden="">
+                        <label for="checkbox2" class="toggle2">
+                            <div class="bar bar--top"></div>
+                            <div class="bar bar--middle"></div>
+                            <div class="bar bar--bottom"></div>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+        <div class="recipe-page">
+            <section class="recipe">
+                <img src="/img/mon_an/canh-khoai-mo.jpg" class="">
+                <article class="recipe-info">
+                    <h2>Canh khoai mỡ</h2>
+                    <p>
+                        Canh khoai mỡ là một món ăn vô cùng quen thuộc của người dân Việt Nam, đặc biệt là ở vùng Tây Nam Bộ. Canh khoai mỡ không những thơm ngon, dễ nấu mà còn mang lại rất nhiều giá trị dinh dưỡng. Hãy cùng vào bếp để thực hiện ngay nhé!
+                    </p>
+                    <div class="recipe-icons">
+                        <article>
+                            <i class="fa-regular fa-clock"></i>
+                            <h5>Thời gian chuẩn bị</h5>
+                            <p>20 min.</p>
+                        </article>
+                        <article>
+                            <i class="fa-regular fa-clock"></i>
+                            <h5>Thời gian nấu</h5>
+                            <p>30 min.</p>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-user"></i>
+                            <h5>Phục vụ</h5>
+                            <p>4 -5 người</p>
+                        </article>
+                    </div>
+                    <!-- Thêm tag vào đây -->
+                    <p class="recipe-tags">
+                        Tags : <a href="tag-template.html">khoai-mo</a>
+                        <a href="tag-template.html">canh</a>
+
+                    </p>
+                </article>
+            </section>
+            <!-- content -->
+            <section class="recipe-content">
+                <article>
+                    <h1>HƯỚNG DẪN</h1>
+                    <hr>
+
+                    <div class="single-instruction">
+                        <header flex>
+                            <p>Bước 1: </p>
+                            <b> Sơ chế nguyên liệu</b>
+                        </header>
+                        <p>
+                            Khoai mỡ sau khi mua về gọt vỏ, rửa sạch sau đó băm nhuyễn hoặc dùng muỗng để nạo.
+                            <br> Nấm đùi gà rửa sạch, cắt khoanh vừa ăn. Ngò gai, ngò om rửa sạch cắt nhỏ cùng hành tím
+                        </p>
+                    </div>
+                    <!-- end of single instruction -->
+                    <!-- single instruction -->
+                    <div class="single-instruction">
+                        <header>
+                            <header flex>
+                                <p>Bước 2: </p>
+                                <b>Xào nấm đùi gà</b>
+                            </header>
+                        </header>
+                        <p>Làm nóng một muỗng canh dầu ăn rồi để lửa nhỏ, sau đó cho tỏi vào phi cho thơm, tiếp tục để lửa nhỏ. Sau đó các bạn cho nấm đùi gà đã sơ chế vào xào với lửa lớn trong khoảng 10 giây, sau khi đã xào sơ nấm đùi gà thì nêm 1/2 muỗng
+                            nước mắm chay vào</p>
+                    </div>
+                    <!-- end of single instruction -->
+                    <!-- single instruction -->
+                    <div class="single-instruction">
+                        <header>
+                            <header flex>
+                                <p>Bước 3: </p>
+                                <b>Nấu canh</b>
+                            </header>
+                        </header>
+                        <p>Sau khi nấm đã được xào sơ đến khi ngả vàng thì cho khoảng 500ml nước vào. Đậy nắp lại để canh được nhanh sôi.
+                            <br><br> Khi canh đã sôi bạn cho phần khoai mỡ vào nấu với lửa lớn. Hớt bỏ phần bọt trên mặt canh. Cho vào canh 1 muỗng đường, 2 muỗng hạt nêm chay.
+                            <br><br> Sau đó nêm nếm lại cho vừa ăn, cuối cùng bỏ phần rau ngò gai và ngò om đã cắt nhỏ vào.</p>
+                    </div>
+                    <!-- end of single instruction -->
+                    <!-- single instruction -->
+                    <div class="single-instruction">
+                        <header>
+                            <header flex>
+                                <p>Bước 4: </p>
+                                <b>Thành phẩm</b>
+                            </header>
+                        </header>
+                        <p>
+                            Tắt bếp, múc canh ra tô, canh khoai mỡ nấm đùi gà có màu tím đặc trưng của khoai và mùi thơm của rau nêm, sẽ và đặc biệt ngon hơn nếu được dùng khi nóng.
+                        </p>
+                    </div>
+                    <!-- end of single instruction -->
+                </article>
+                <article class="second-column">
+                    <div>
+                        <h4>Nguyên liệu</h4>
+                        <ul>
+                            <li>Khoai mỡ 400 gr</li>
+                            <li>Nấm đùi gà 20 gr</li>
+                            <li>Tiêu 1 ít</li>
+                            <li>Đường 1 muỗng canh</li>
+                            <li>Hạt nêm chay 2 muỗng canh</li>
+                            <li>Nước mắm chay 1/2 muỗng canh</li>
+                            <li>Ngò gai 2 nhánh</li>
+                            <li>Hành tím 2 củ</li>
+                            <li>Dầu ăn 1 ít</li>
+                            <li>Ngò om 2 nhánh</li>
+
+                        </ul>
+                    </div>
+                    <br>
+                    <div>
+                        <h4>Video hướng dẫn</h4>
+                        <iframe width="420" height="315" src="https://www.youtube.com/embed/Vpj13I7TMec">
+
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+    <!-- footer -->
+    <footer class="page-footer ">
+        <p>
+            &copy; <span id="date "></span>
+            <span class="footer-logo ">Food Recipes</span> Built by
+            <a href="https://www.facebook.com/ngnhtruong ">Nguyễn Nhật Trường</a>
+        </p>
+    </footer>
+    <script src="/js/app.js "></script>
+</body>
+
+
+
+</html>

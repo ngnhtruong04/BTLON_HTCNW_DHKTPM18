@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Hướng dẫn nấu ăn trực tuyến</title>
+    <link rel="shortcut icon" href="../img/logo/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .flex {
+            display: flex;
+            align-items: center;
+        }
+        
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+        
+        .nav-center {
+            width: 90%;
+            margin: 0 auto;
+        }
+        
+        .nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo img {
+            height: 40px;
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .nav-link {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+        /* Page */
+        
+        .page {
+            padding: 20px;
+        }
+        
+        .recipe-hero {
+            display: flex;
+            align-items: center;
+            margin-left: 5px;
+        }
+        /* Recipe section */
+        
+        .recipe {
+            display: flex;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            /* Adding shadow */
+        }
+        
+        .recipe img {
+            width: 50%;
+            /* Image takes half of the container width */
+        }
+        
+        .recipe article {
+            width: 50%;
+            /* Article takes half of the container width */
+        }
+        /* Adding space between img and article */
+        
+        .recipe img {
+            margin-right: 20px;
+            /* Adjust as needed */
+        }
+        
+        .recipe-content {
+            display: flex;
+            justify-content: space-between;
+        }
+        /* Single instruction */
+        
+        .single-instruction {
+            width: calc(100% - 20px);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Second column */
+        
+        .second-column {
+            margin-top: 50px;
+            width: 40%;
+            margin-left: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .single-instruction,
+        .second-column {
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        
+        .single-instruction header {
+            display: flex;
+            align-items: center;
+        }
+        
+        .single-instruction header div {
+            height: 1px;
+            background-color: #333;
+            flex-grow: 1;
+            margin-left: 10px;
+        }
+        /* Footer */
+        
+        .page-footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        
+        .footer-logo {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="topnav">
+            <div class="container flex">
+                <div class="navicons flex">
+                    <a href="#"><i class=" fa-brands fa-facebook "></i></a>
+                    <a href="#"><i class=" fa-brands fa-twitter "></i></a>
+                    <a href="#"><i class=" fa-brands fa-linkedin "></i></a>
+                    <a href="#"><i class=" fa-brands fa-youtube "></i></a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="mainnav">
+            <div class="container flex">
+                <a href="index.html">
+                    <div class="logo flex">
+                        <img src="/img/logo/logo-black.png" alt="">
+                        <h1>Food Recipes</h1>
+                    </div>
+                </a>
+                <ul class="navlist flex">
+                    <li><a href="../index.html">Trang chủ</a></li>
+                    <li><a href="/">Blog</a></li>
+                    <li><a href="../recipe.html">Công thức</a></li>
+                    <li><a href="../contact.html">Liên lạc</a></li>
+                </ul>
+                <div class="searchbar flex">
+                    <a href="../signup.html" class="signinup">Đăng ký</a>
+                    <a href="#" class="signinup" id="loginBtn">Đăng nhập</a>
+                    <i class="fa-solid fa-magnifying-glass" id="searchopen"></i>
+                    <div class="navonoff">
+                        <input type="checkbox" id="checkbox2" hidden="">
+                        <label for="checkbox2" class="toggle2">
+                            <div class="bar bar--top"></div>
+                            <div class="bar bar--middle"></div>
+                            <div class="bar bar--bottom"></div>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+        <div class="recipe-page">
+            <section class="recipe">
+                <img src="/img/mon_an/canh-bau-suon-heo.jpg" class="">
+                <article class="recipe-info">
+                    <h2>Canh bầu sườn heo</h2>
+                    <p>
+
+                        Một trong những món ăn quen thuộc trong bữa cơm gia đình người Việt là canh bầu sườn heo. Canh này thường được chế biến đơn giản nhưng vẫn đảm bảo hương vị đậm đà và bổ dưỡng. Sự kết hợp giữa sự ngọt của bầu, vị thơm của sườn heo và gia vị tạo nên một
+                        hương vị đặc trưng, khiến mỗi miếng thịt sườn mềm mại đều thấm đượm trong nước dùng đậm đà. Đây thực sự là một món ăn gắn liền với hình ảnh gia đình sum họp và ấm cúng trong lòng người Việt.
+                    </p>
+                    <div class="recipe-icons">
+                        <article>
+                            <i class="fa-regular fa-clock"></i>
+                            <h5>Thời gian chuẩn bị</h5>
+                            <p>05 min.</p>
+                        </article>
+                        <article>
+                            <i class="fa-regular fa-clock"></i>
+                            <h5>Thời gian nấu</h5>
+                            <p>10 min.</p>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-user"></i>
+                            <h5>Phục vụ</h5>
+                            <p>4 -5 người</p>
+                        </article>
+                    </div>
+                    <!-- Thêm tag vào đây -->
+                    <p class="recipe-tags">
+                        Tags : <a href="tag-template.html">suon-heo</a>
+                        <a href="tag-template.html">canh</a>
+                        <a href="tag-template.html">bau</a>
+
+                    </p>
+                </article>
+            </section>
+            <!-- content -->
+            <section class="recipe-content">
+                <article>
+                    <h1>HƯỚNG DẪN</h1>
+                    <hr>
+
+                    <div class="single-instruction">
+                        <header flex>
+                            <p>Bước 1: </p>
+                            <b> Sơ chế nguyên liệu</b>
+                        </header>
+                        <p>
+                            Xương heo mua về, bạn rửa với nước muối loãng cho không bị hôi, sau đó rửa lại vài lần với nước cho thật sạch rồi để ráo.
+                            <br><br> Tiếp theo, bạn cho xương heo vào nồi, thêm nước ngập mặt xương và 1/2 muỗng cà phê muối, rồi bắc lên bếp nấu với lửa cho sôi, sau đó bạn vớt xương heo ra, bỏ đi nước luộc xương.
+                            <br><br> Bầu mua về, bạn gọt bỏ đi phần vỏ, sau đó cắt cục vừa ăn, rồi rửa vài lần với nước cho sạch rồi để ráo.
+                            <br><br> Hành lá, bạn rửa sạch, phần lá cắt nhỏ, còn phần củ bạn đập dập nha!
+                        </p>
+                    </div>
+                    <!-- end of single instruction -->
+                    <!-- single instruction -->
+                    <div class="single-instruction">
+                        <header>
+                            <header flex>
+                                <p>Bước 2: </p>
+                                <b>Nấu canh bầu hầm xương</b>
+                            </header>
+                        </header>
+                        <p>Bắc nồi lên bếp, bạn cho 1 muỗng canh dầu ăn vào, sau đó cho phần hành củ đập dập vào phi thơm trên lửa vừa.
+                            <br><br> Sau đó, bạn cho xương đã sơ chế vào xào săn lại trên lửa vừa. Tiếp theo thêm 1/2 muỗng cà phê muối, 1/2 muỗng cà phê nước mắm, đảo vài lần rồi cho 1 lít nước vào, hầm xương khoảng 10 - 15 phút cho thịt mềm.
+                            <br><br> Khi thịt đã mềm, bạn cho bầu vào, nấu thêm 4 - 5 phút cho bầu vừa chín thì thêm 1 muỗng cà phê hạt nêm, 1/2 muỗng cà phê bột ngọt, rồi bạn nêm nếm lại vừa với khẩu vị gia đình là được nha!
+                            <br><br> Cuối cùng, bạn thêm hành lá cắt nhỏ và ít tiêu xay vào nồi canh rồi tắt bếp nha!</p>
+                    </div>
+                    <!-- end of single instruction -->
+                    <!-- single instruction -->
+                    <div class="single-instruction">
+                        <header>
+                            <header flex>
+                                <p>Bước 3: </p>
+                                <b>Thành phẩm</b>
+                            </header>
+                        </header>
+                        <p>Canh bầu hầm xương có phần nước canh trong ngần, màu xanh của bầu và hành lá vô cùng bắt mắt, lôi cuốn người thưởng thức. Bầu ngọt vừa chín tới, thêm phần thịt xương mềm, nước ngọt thanh.
+                            <br><br> Bữa cơm gia đình sẽ thêm ngon hơn khi chiêu đãi món canh này bạn nha, công thức nấu đơn giản nhưng chắc chắc sẽ làm gia đình mình tấm tắc khen ngon đó.</p>
+                    </div>
+                    <!-- end of single instruction -->
+
+                </article>
+                <article class="second-column">
+                    <div>
+                        <h4>Nguyên liệu</h4>
+                        <ul>
+
+
+
+
+                            (muối/ bột ngọt/ hạt nêm/ tiêu xay)
+                            <li>Bầu 1 trái </li>
+                            <li>Hành lá 2 nhánh</li>
+                            <li>Xương heo 200 gr</li>
+                            <li>Nước mắm 1/2 muỗng cà phê</li>
+                            <li>Dầu ăn 1 muỗng canh</li>
+                            <li>Gia vị thông dụng 1 ít <br>(muối/ bột ngọt/ hạt nêm/ tiêu xay)</li>
+
+
+                        </ul>
+                    </div>
+                    <br>
+                    <div>
+                        <h4>Video hướng dẫn</h4>
+                        <iframe width="420" height="315" src="https://www.youtube.com/embed/5pU-3lxsSrM">
+
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+    <!-- footer -->
+    <footer class="page-footer ">
+        <p>
+            &copy; <span id="date "></span>
+            <span class="footer-logo ">Food Recipes</span> Built by
+            <a href="https://www.facebook.com/ngnhtruong ">Nguyễn Nhật Trường</a>
+        </p>
+    </footer>
+    <script src="/js/app.js "></script>
+</body>
+
+
+
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Hướng dẫn nấu ăn trực tuyến</title>
+    <link rel="shortcut icon" href="../img/logo/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .flex {
+            display: flex;
+            align-items: center;
+        }
+        
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+        
+        .nav-center {
+            width: 90%;
+            margin: 0 auto;
+        }
+        
+        .nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo img {
+            height: 40px;
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .nav-link {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+        /* Page */
+        
+        .page {
+            padding: 20px;
+        }
+        
+        .recipe-hero {
+            display: flex;
+            align-items: center;
+            margin-left: 5px;
+        }
+        /* Recipe section */
+        
+        .recipe {
+            display: flex;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            /* Adding shadow */
+        }
+        
+        .recipe img {
+            width: 50%;
+            /* Image takes half of the container width */
+        }
+        
+        .recipe article {
+            width: 50%;
+            /* Article takes half of the container width */
+        }
+        /* Adding space between img and article */
+        
+        .recipe img {
+            margin-right: 20px;
+            /* Adjust as needed */
+        }
+        
+        .recipe-content {
+            display: flex;
+            justify-content: space-between;
+        }
+        /* Single instruction */
+        
+        .single-instruction {
+            width: calc(100% - 20px);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Second column */
+        
+        .second-column {
+            margin-top: 50px;
+            width: 40%;
+            margin-left: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .single-instruction,
+        .second-column {
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        
+        .single-instruction header {
+            display: flex;
+            align-items: center;
+        }
+        
+        .single-instruction header div {
+            height: 1px;
+            background-color: #333;
+            flex-grow: 1;
+            margin-left: 10px;
+        }
+        /* Footer */
+        
+        .page-footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        
+        .footer-logo {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="topnav">
+            <div class="container flex">
+                <div class="navicons flex">
+                    <a href="#"><i class=" fa-brands fa-facebook "></i></a>
+                    <a href="#"><i class=" fa-brands fa-twitter "></i></a>
+                    <a href="#"><i class=" fa-brands fa-linkedin "></i></a>
+                    <a href="#"><i class=" fa-brands fa-youtube "></i></a>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="mainnav">
+            <div class="container flex">
+                <a href="index.html">
+                    <div class="logo flex">
+                        <img src="/img/logo/logo-black.png" alt="">
+                        <h1>Food Recipes</h1>
+                    </div>
+                </a>
+                <ul class="navlist flex">
+                    <li><a href="../index.html">Trang chủ</a></li>
+                    <li><a href="/">Blog</a></li>
+                    <li><a href="../recipe.html">Công thức</a></li>
+                    <li><a href="../contact.html">Liên lạc</a></li>
+                </ul>
+                <div class="searchbar flex">
+                    <a href="../signup.html" class="signinup">Đăng ký</a>
+                    <a href="#" class="signinup" id="loginBtn">Đăng nhập</a>
+                    <i class="fa-solid fa-magnifying-glass" id="searchopen"></i>
+                    <div class="navonoff">
+                        <input type="checkbox" id="checkbox2" hidden="">
+                        <label for="checkbox2" class="toggle2">
+                            <div class="bar bar--top"></div>
+                            <div class="bar bar--middle"></div>
+                            <div class="bar bar--bottom"></div>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+        <div class="recipe-page">
+            <section class="recipe">
+                <img src="/img/mon_an/com-tam.jpg" class="">
+                <article class="recipe-info">
+                    <h2>Cơm tấm</h2>
+                    <p>
+                        Cơm tấm là một trong những món ăn phổ biến và được yêu thích trong bữa ăn hàng ngày của người Việt Nam. Mỗi miếng cơm tấm được chế biến cẩn thận từ gạo nếp, sau đó được thái nhỏ và phủ lên trên đó là lớp mỡ hành giòn rụm. Khi kèm theo các loại món như
+                        thịt heo nướng, trứng ốp la, chả, và dưa leo, cơm tấm trở thành một bữa ăn đầy đủ dưỡng chất và hấp dẫn về hương vị. Với sự phong phú trong cách chế biến và sự đa dạng trong cách phục vụ, cơm tấm không chỉ là một món ăn mà còn
+                        là một biểu tượng của ẩm thực đường phố và văn hóa ẩm thực của Việt Nam.
+                    </p>
+                    <div class="recipe-icons">
+                        <article>
+                            <i class="fa-regular fa-clock"></i>
+                            <h5>Thời gian chuẩn bị</h5>
+                            <p>20 min.</p>
+                        </article>
+                        <article>
+                            <i class="fa-regular fa-clock"></i>
+                            <h5>Thời gian nấu</h5>
+                            <p>40 min.</p>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-user"></i>
+                            <h5>Phục vụ</h5>
+                            <p>8 người</p>
+                        </article>
+                    </div>
+                    <!-- Thêm tag vào đây -->
+                    <p class="recipe-tags">
+                        Tags : <a href="tag-template.html">thit-heo</a>
+                        <a href="tag-template.html">com</a>
+                        <a href="tag-template.html">nuoc-mam</a>
+                        <a href="tag-template.html">nuong</a>
+
+                    </p>
+                </article>
+            </section>
+            <!-- content -->
+            <section class="recipe-content">
+                <article>
+                    <h1>HƯỚNG DẪN</h1>
+                    <hr>
+
+                    <div class="single-instruction">
+                        <header flex>
+                            <p>Bước 1: </p>
+                            <b> Sơ chế nguyên liệu</b>
+                        </header>
+                        <p>
+                            Thịt sườn mua về bạn rửa sạch với nước.
+                            <br><br> Sau đó bạn cho thịt vào nồi cùng 2 muỗng canh giấm, 2 muỗng canh muối rồi đổ nước xâm xấp mặt thịt và ngâm từ 20 - 30 phút.
+                            <br><br> Sau khi ngâm thịt xong bạn vớt ra và rửa thịt lại với nước sạch và để ráo.
+                            <br><br> Ớt bỏ cuống, tỏi và hành tím bóc sạch vỏ. Sau đó mang sả, ớt, tỏi, hành và hành lá đi rửa sạch rồi để ráo.
+                        </p>
+                    </div>
+                    <!-- end of single instruction -->
+                    <!-- single instruction -->
+                    <div class="single-instruction">
+                        <header>
+                            <header flex>
+                                <p>Bước 2: </p>
+                                <b>Ướp sườn</b>
+                            </header>
+                        </header>
+                        <p>Sả, hành tím, 4 tép tỏi và 5 trái ớt bạn mang đi cắt nhỏ và cho vào cối xay cùng với 6 muỗng canh nước tương, 1/2 muỗng cà phê bột ngọt, 6 muỗng canh sữa tươi, 1 muỗng cà phê ngũ vị hương và xay đến khi các nguyên liệu tạo thành
+                            1 hỗn hợp đồng nhất.
+                            <br><br> Tiếp theo, cho tất cả hỗn hợp ướp vào thịt sườn rồi trộn đều.
+                            <br><br> Ướp sườn từ 8 - 12 tiếng cho thịt sườn thấm đều gia vị.
+                            <br><br> Thịt sườn sau khi ướp, bạn cho thêm vào đó 1 chén nước lọc (chén ăn cơm) và thấm đều lần lượt 2 mặt thịt qua phần nước sau đó mới mang đi nướng thịt nhé!</p>
+                    </div>
+                    <!-- end of single instruction -->
+                    <!-- single instruction -->
+                    <div class="single-instruction">
+                        <header>
+                            <header flex>
+                                <p>Bước 3: </p>
+                                <b>Nướng sườn</b>
+                            </header>
+                        </header>
+                        <p>Bạn làm nóng bếp điện rồi lần lượt cho từng miếng thịt đã thấm qua nước lên vỉ rồi nướng ở nhiệt độ nhỏ.
+                            <br><br> Nướng khoảng 20 phút đến khi thịt chín và chuyển vàng.
+                            <br><br> Sau đó, bạn cho ra chén 2 muỗng canh mật ong, 1 muỗng canh nước tương, 4 muỗng canh nước ướp thịt rồi trộn đều.
+                            <br><br> Lần lượt phết hỗn hợp mật ong vừa rồi lên miếng thịt và nướng khoảng 1 phút thì trở mặt thịt và phết mật ong lên mặt còn lại.
+                            <br><br> Bạn tiếp tục nướng thêm 5 - 7 phút nữa và lần lượt trở đều mặt thịt đến khi thịt có màu vàng nâu sẫm và dậy mùi thơm lừng thì gắp thịt ra.</p>
+                    </div>
+                    <!-- end of single instruction -->
+                    <!-- single instruction -->
+                    <div class="single-instruction">
+                        <header>
+                            <header flex>
+                                <p>Bước 4: </p>
+                                <b>Làm mỡ hành và nước mắm</b>
+                            </header>
+                        </header>
+                        <p>
+                            Bạn cho 2 trái ớt và vào cối xay cùng với 2 tép tỏi và xay nhuyễn.
+                            <br><br> Cho vào tô 8 muỗng canh nước sôi để nguội, 3 muỗng canh đường rồi khuấy cho đường tan.
+                            <br><br> Thêm vào 3 muỗng canh nước mắm và khuấy đều lần nữa.
+                            <br><br> Sau đó bạn thêm 1/2 muỗng canh nước cốt chanh vào cùng với tỏi và ớt đã xay nhuyễn rồi khuấy đều là xong.
+                            <br><br> Hành lá sau khi đã rửa bạn cắt nhỏ rồi cho vào chén sạch cùng 1 ít muối.
+                            <br><br> Tiếp theo, bạn cho vào chảo 2 muỗng canh dầu ăn rồi đun sôi dầu và cho ngay vào chén hành lá.
+                            <br><br> Nhanh tay trộn đều hành lá lúc dầu còn nóng là bạn đã hoàn thành món mỡ hành rồi đấy!
+                        </p>
+                    </div>
+                    <!-- end of single instruction -->
+                    <!-- single instruction -->
+                    <div class="single-instruction">
+                        <header>
+                            <header flex>
+                                <p>Bước 5: </p>
+                                <b>Thành phẩm</b>
+                            </header>
+                        </header>
+                        <p>
+                            Vậy là món cơm tấm của chúng ta đã sẵn sàng rồi đây!
+                            <br><br> Bạn cho cơm ra đĩa cùng với dưa leo, cà chua cắt lát, đồ chua và thịt sườn. Sau đó, cho thêm 1 ít mỡ hành lên trên và cuối cùng là nước mắm tỏi ớt là có thể thưởng thức được rồi.
+                            <br><br> Sườn sau khi nướng chín có mùi thơm lừng và màu vàng nâu đẹp mắt, thịt sườn mềm, mọng nước lại còn thấm đều gia vị rất đậm đà. Ăn cùng với cơm và nước mắm chua chua, ngọt ngọt cay cay cùng mỡ hành béo ngậy quả là tuyệt
+                            vời!
+                        </p>
+                    </div>
+                    <!-- end of single instruction -->
+                </article>
+                <article class="second-column">
+                    <div>
+                        Thịt sườn 2 kg Nước cốt chanh 1/2 muỗng canh
+
+
+
+
+
+                        <h4>Nguyên liệu</h4>
+                        <ul>
+
+                            <li> Sả cây 30 gr <br><br> (khoảng 2 cây sả)</li>
+                            <li> Ớt 7 tráir</li>
+                            <li> Tỏi 7 củ</li>
+                            <li> Hành lá 4 cây</li>
+                            <li> Hành tím cỡ bự 1 củ</li>
+                            <li>Dưa leo/ cà chua 1 ít</li>
+                            <li>NNước tương 7 muỗng canh</li>
+                            <li>Sữa tươi 6 muỗng canh</li>
+                            <li>Ngũ vị hương 1 muỗng cà phê</li>
+                            <li>Nước mắm 3 muỗng canh</li>
+                            <li> Mật ong 2 muỗng canh</li>
+                            <li>Giấm 2 muỗng canh</li>
+                            <li> Dầu ăn 2 muỗng canh</li>
+                            <li>Gia vị thông dụng 1 ít<br>(muối/ bột ngọt/ đường)</li>
+
+                        </ul>
+                    </div>
+                    <br>
+                    <div>
+                        <h4>Video hướng dẫn</h4>
+                        <iframe width="420" height="315" src="https://www.youtube.com/embed/cJu6tFJe_Gc">
+
+                    </div>
+                </article>
+            </section>
+        </div>
+    </main>
+    <!-- footer -->
+    <footer class="page-footer ">
+        <p>
+            &copy; <span id="date "></span>
+            <span class="footer-logo ">Food Recipes</span> Built by
+            <a href="https://www.facebook.com/ngnhtruong ">Nguyễn Nhật Trường</a>
+        </p>
+    </footer>
+    <script src="/js/app.js "></script>
+</body>
+
+
+
+</html>

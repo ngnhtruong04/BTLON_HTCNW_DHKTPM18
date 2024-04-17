@@ -1,0 +1,95 @@
+.containerfood {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.containerfood h2 {
+    margin-bottom: 15px;
+}
+
+.containerfood form {
+    display: flex;
+    flex-direction: column;
+}
+
+.containerfood form .form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.containerfood form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.containerfood form .form-group input,
+.containerfood form .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+
+/* CSS cho nút gửi đơn */
+
+#submitBtn {
+    background-color: #4CAF50;
+    /* Màu nền */
+    color: white;
+    padding: 10px 20px;
+    /* Kích thước */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* Hiệu ứng chuyển đổi màu nền */
+}
+
+#submitBtn:hover {
+    background-color: #45a049;
+    /* Màu nền khi di chuột qua */
+}
+
+#submitBtn:active {
+    background-color: #3e8e41;
+    /* Màu nền khi được nhấn */
+}
+
+
+/* CSS cho phần hiển thị bài blog */
+
+#blogsContainer {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#blogsContainer h2 {
+    margin-bottom: 15px;
+}
+
+#blogsContainer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#blogsContainer li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#blogsContainer li:last-child {
+    border-bottom: none;
+}
+
+#blogsContainer li:hover {
+    background-color: #f0f0f0;
+}
