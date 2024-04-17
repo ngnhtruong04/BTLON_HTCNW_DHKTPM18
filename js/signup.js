@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    var check = true;
     // Kiểm tra khi rời khỏi ô input
     $('input').blur(function() {
         var inputValue = $(this).val().trim();
@@ -12,30 +11,24 @@ $(document).ready(function() {
 
     // Kiểm tra khi nhấn button type submit
     $('#btnSbt').click(function(event) {
-        // boolean check = true;
+        var check = true; // Reset biến kiểm tra
+
         $('input').each(function() {
             var inputValue = $(this).val().trim();
             var inputId = $(this).attr('id');
             var regex;
             switch (inputId) {
-                case 'txtHT':
+                case 'name':
                     regex = /^([A-ZÀ-Ỹ][a-zà-ỹ]+)(\s[A-ZÀ-Ỹ][a-zà-ỹ]+)*$/; // Chỉ chấp nhận ký tự chữ và khoảng trắng
                     break;
-                case 'txtNS':
-                    regex = /^\d{4}-\d{2}-\d{2}$/; // Định dạng ngày sinh yyyy-mm-dd
-                    break;
-                case 'txtDN':
-                    regex = /^[a-zA-Z0-9_]+$/; // Chỉ chấp nhận ký tự chữ, số và dấu gạch dưới
-                    break;
-                case 'txtMK':
-                    regex = /^.{6,}$/; // Ít nhất 6 ký tự
-                    break;
-                case 'txtXNMK':
-                    var password = $('#txtMK').val().trim();
-                    regex = new RegExp('^' + password + '$'); // Xác nhận mật khẩu trùng khớp
-                    break;
-                case 'txtemail':
+                case 'email':
                     regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Định dạng email hợp lệ
+                    break;
+                case 'phone':
+                    regex = /^\d{10}$/; // Định dạng số điện thoại hợp lệ
+                    break;
+                case 'food':
+                    regex = /.*/; // Mặc định chấp nhận bất kỳ ký tự nào
                     break;
                 default:
                     regex = /.*/; // Mặc định chấp nhận bất kỳ ký tự nào
@@ -48,8 +41,9 @@ $(document).ready(function() {
                 $('#' + inputId).next('span').text('').removeClass('mauDo');
             }
         });
+
         if (check) {
-            alert('Đăng ký thành công!');
+            alert('Đơn hàng của bạn đã được gửi thành công!');
         }
     });
 });

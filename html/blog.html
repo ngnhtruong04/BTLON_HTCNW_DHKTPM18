@@ -113,14 +113,19 @@
                     <span class="error"></span>
                 </div>
                 <div class="form-group">
+                    <label for="description">Mô Tả Món Ăn:</label>
+                    <textarea id="description" name="description" rows="4" required></textarea>
+                    <span class="error"></span>
+                </div>
+                <div class="form-group">
                     <label for="image">Tải ảnh lên:</label>
                     <input type="file" id="image" name="image" accept="image/*">
                     <div id="imagePreview"></div>
                 </div>
-                <button type="submit">Gửi Đơn</button>
+                <button type="submit" id="submitBtn">Gửi Đơn</button>
             </form>
         </div>
-        <div class="containerfood" id="blogsContainer">
+        <div class="container" id="blogsContainer">
             <h2>Các Bài Blog</h2>
             <!-- Hiển thị danh sách các bài blog đã gửi lên -->
             <!-- ... -->
